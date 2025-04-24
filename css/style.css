@@ -2156,4 +2156,17 @@ transition: background-color 0.3s ease;
 .button.special:hover {
 background-color: #030f4e;
 }
-
+#main-nav {
+	pointer-events: none;        /* Não captura eventos */
+  }
+  #main-nav a {
+	pointer-events: auto;        /* Captura eventos normalmente */
+  }
+#main-nav {
+	position: relative;  /* ou fixed, conforme seu layout */
+	z-index: 10;         /* valor menor que o do conteúdo abaixo */
+  }
+  #three, #footer {
+	position: relative;
+	z-index: 20;
+  }
